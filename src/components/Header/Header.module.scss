@@ -1,0 +1,31 @@
+@import '../../variables.scss';
+
+.pageHeader {
+  background-color: $darkgray;
+  color: $white;
+  line-height: 1;
+
+  svg {
+    height: 100%;
+    width: 100%;
+  }
+  > div {
+    h1 {
+      font-size: clamp(10px, 8vw, 100px);
+      word-break: normal;
+      white-space: nowrap;
+    }
+    span {
+      color: $lightblue;
+
+      white-space: nowrap;
+      font-size: clamp(10px, 4.5vw, 55px);
+    }
+    padding: 2rem 0;
+    display: grid;
+    gap: 2rem;
+    grid-template-columns: 1fr 4fr;
+    justify-content: space-between;
+    align-items: center;
+  }
+}

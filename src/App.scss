@@ -1,0 +1,68 @@
+@import './variables.scss';
+
+#root {
+  margin: 0 auto;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+.content-wrapper {
+  width: $contentWidth;
+  margin: auto;
+}
+
+.articles-wrapper {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2rem;
+  @media (width < $tablet) {
+    grid-template-columns: 1fr;
+  }
+  h2 {
+    color: $lightblue;
+    font-weight: lighter;
+    font-family: $roboto;
+  }
+  img {
+    width: 100%;
+  }
+  &:has(img) {
+    grid-template-columns: 1fr;
+    div {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1rem;
+      @media (width < $tablet) {
+        grid-template-columns: 1fr;
+      }
+    }
+  }
+}
+
+a {
+  color: $white;
+  &:hover {
+    color: $navhover;
+  }
+}
+
+button {
+  border: none;
+  outline: none;
+  background-color: $lightblue;
+  color: $white;
+  padding: 0.5rem;
+  cursor: pointer;
+}
+
+::placeholder {
+  color: $lightgray;
+}
+
+h1,
+h2 {
+  font-family: $oswald;
+}

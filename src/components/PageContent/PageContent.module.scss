@@ -1,0 +1,33 @@
+@import '/src/variables.scss';
+
+.pageContent {
+  padding: 3rem 0;
+}
+
+.sectionHeader {
+  position: relative;
+  margin: 3rem 0 2rem 0;
+  a {
+    color: $darkgray;
+    font-weight: bold;
+    position: absolute;
+    top: 1rem;
+    right: 0;
+  }
+  h2 {
+    font-size: 2rem;
+    color: $lightblue;
+    font-weight: lighter;
+    font-family: $roboto;
+  }
+  p {
+    font-style: italic;
+    font-size: 1.2rem;
+  }
+}
+
+.sectionHeader:first-of-type {
+  a {
+    display: none;
+  }
+}

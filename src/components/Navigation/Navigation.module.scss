@@ -1,0 +1,26 @@
+@import '../../variables.scss';
+
+.navigation {
+  background-color: $darkgray;
+  box-shadow: 0 5px 5px rgb(0 0 0 / 0.3);
+  z-index: -1;
+  > div {
+    ul {
+      width: 100%;
+      display: flex;
+      justify-content: flex-end;
+      gap: 1rem;
+      padding: 1rem 0;
+      @media (width < $tablet) {
+        justify-content: flex-start;
+      }
+      @media (width < $mobile) {
+        flex-direction: column;
+        gap: 0.5rem;
+      }
+      a {
+        text-decoration: none;
+      }
+    }
+  }
+}
